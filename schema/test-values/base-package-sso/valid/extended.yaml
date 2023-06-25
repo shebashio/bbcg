@@ -1,6 +1,0 @@
-  sso:
-    enabled: true
-    client_id: client
-    client_secret: secret
-    default_role: admin
-    issuer: https://login.dso.mil/auth/realms/baby-yoda
