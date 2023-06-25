@@ -1,11 +1,14 @@
+# Needed for Iron Bank images and default Big Bang packages; set at deploy time 
 registryCredentials:
   registry: registry1.dso.mil
   username: "###ZARF_VAR_REGISTRY1_USERNAME###"
   password: "###ZARF_VAR_REGISTRY1_CLI_SECRET###"
   email: ""
 
+# Neuvector deployment bug fixed in later version of Big Bang; we pin to v2.0.0
 neuvector:
   enabled: false
 
+# Tempo is the "straw that broke the camel's back" for my pay-to-play cluster ):
 tempo:
   enabled: false
