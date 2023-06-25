@@ -28,6 +28,6 @@ components:
         repo: https://github.com/willswire/bbcg.git
         valuesFiles:
           - configs/disable-all.yaml
-          - ingress.yaml
-          - kyverno.yaml
-          - loki.yaml
+          - configs/ingress.yaml
+          - configs/kyverno.yaml
+          - configs/loki.yaml
