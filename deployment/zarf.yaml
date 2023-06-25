@@ -32,8 +32,9 @@ components:
     extensions:
       bigbang:
         version: 2.0.0
+        repo: https://github.com/willswire/bbcg.git
         valuesFiles:
-          # - credentials.yaml
-          - ingress.yaml
-          - kyverno.yaml
-          - loki.yaml
+          - configs/disable-all.yaml
+          # - ingress.yaml
+          # - kyverno.yaml
+          # - loki.yaml

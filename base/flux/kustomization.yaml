@@ -2,19 +2,19 @@
 resources:
 - gotk-components.yaml
 
-# update flux components to use ironbank images
+# update flux components to use chainguard images
 images:
 - name: ghcr.io/fluxcd/helm-controller
-  newName: registry1.dso.mil/ironbank/fluxcd/helm-controller
+  newName: cgr.dev/chainguard/helm-controller
   newTag: v0.32.1
 - name: ghcr.io/fluxcd/kustomize-controller
-  newName: registry1.dso.mil/ironbank/fluxcd/kustomize-controller
+  newName: cgr.dev/chainguard/kustomize-controller
   newTag: v0.35.1
 - name: ghcr.io/fluxcd/notification-controller
-  newName: registry1.dso.mil/ironbank/fluxcd/notification-controller
+  newName: cgr.dev/chainguard/notification-controller
   newTag: v0.33.0
 - name: ghcr.io/fluxcd/source-controller
-  newName: registry1.dso.mil/ironbank/fluxcd/source-controller
+  newName: cgr.dev/chainguard/source-controller
   newTag: v0.36.1
 
 patches:
