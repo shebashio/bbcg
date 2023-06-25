@@ -55,8 +55,7 @@ monitoring:
     alertmanager:
       alertmanagerSpec:
         image:
-          registry: cgr.dev
-          repository: chainguard/prometheus-alertmanager
+          repository: cgr.dev/chainguard/prometheus-alertmanager
           tag: latest
     grafana:
       sidecar:
@@ -73,29 +72,24 @@ monitoring:
             memory: 100Mi
     kube-state-metrics:
       image:
-        registry: cgr.dev
-        repository: chainguard/kube-state-metrics
+        repository: cgr.dev/chainguard/kube-state-metrics
         tag: latest
     prometheus:
       prometheusSpec:
         image:
-          registry: cgr.dev
-          repository: chainguard/prometheus
+          repository: cgr.dev/chainguard/prometheus
           tag: latest
     prometheusOperator:
       image:
-        registry: cgr.dev
-        repository: chainguard/prometheus-operator
+        repository: cgr.dev/chainguard/prometheus-operator
         tag: latest
       prometheusConfigReloader:
         image:
-          registry: cgr.dev
-          repository: chainguard/prometheus-config-reloader
+          repository: cgr.dev/chainguard/prometheus-config-reloader
           tag: latest
     prometheus-node-exporter:
       image:
-        registry: cgr.dev
-        repository: chainguard/prometheus-node-exporter
+        repository: cgr.dev/chainguard/prometheus-node-exporter
         tag: latest
 
 # Addons image replacements
@@ -103,6 +97,5 @@ addons:
   metricsServer:
     values:
       image:
-        registry: cgr.dev
-        repository: chainguard/metrics-server
+        repository: cgr.dev/chainguard/metrics-server
         tag: latest
