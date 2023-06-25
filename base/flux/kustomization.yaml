@@ -6,12 +6,16 @@ resources:
 images:
 - name: ghcr.io/fluxcd/helm-controller
   newName: cgr.dev/chainguard/helm-controller
+  newTag: latest
 - name: ghcr.io/fluxcd/kustomize-controller
   newName: cgr.dev/chainguard/kustomize-controller
+  newTag: latest
 - name: ghcr.io/fluxcd/notification-controller
   newName: cgr.dev/chainguard/notification-controller
+  newTag: latest
 - name: ghcr.io/fluxcd/source-controller
   newName: cgr.dev/chainguard/source-controller
+  newTag: latest
 
 patches:
   - target:
