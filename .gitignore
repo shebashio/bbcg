@@ -1,5 +1,6 @@
 # zarf baddies
 *.tar.zst
+zarf-config.toml
 
 .idea/
 certs/
