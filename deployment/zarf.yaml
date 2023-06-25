@@ -8,25 +8,18 @@ metadata:
   architecture: amd64
   yolo: true
 
-# variables:
-#   - name: REGISTRY1_USERNAME
-#     description: The username for pulling images from registry1.dso.mil
-#     prompt: true
-#   - name: REGISTRY1_CLI_SECRET
-#     description: The CLI secret for pulling images from registry1.dso.mil
-#     prompt: true
-#   - name: REGISTRY1_AUTH
-#     description: A base64 encoded concatenation of 'REGISTRY1_USERNAME:REGISTRY1_CLI_SECRET'
-#     prompt: true
+variables:
+  - name: REGISTRY1_USERNAME
+    description: The username for pulling images from registry1.dso.mil
+    prompt: true
+  - name: REGISTRY1_CLI_SECRET
+    description: The CLI secret for pulling images from registry1.dso.mil
+    prompt: true
+  - name: REGISTRY1_AUTH
+    description: A base64 encoded concatenation of 'REGISTRY1_USERNAME:REGISTRY1_CLI_SECRET'
+    prompt: true
 
 components:
-  # - name: flux-private-registry
-  #   required: true
-  #   manifests:
-  #     - name: private-registry
-  #       namespace: flux-system
-  #       files:
-  #         - private-registry.yaml
   - name: bigbang
     required: true
     extensions:
@@ -35,6 +28,6 @@ components:
         repo: https://github.com/willswire/bbcg.git
         valuesFiles:
           - configs/disable-all.yaml
-          # - ingress.yaml
-          # - kyverno.yaml
-          # - loki.yaml
+          - ingress.yaml
+          - kyverno.yaml
+          - loki.yaml
