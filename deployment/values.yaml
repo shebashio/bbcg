@@ -52,6 +52,12 @@ kyvernoPolicies:
 # Monitoring image replacements
 monitoring:
   values:
+    alertmanager:
+      alertmanagerSpec:
+        image:
+          registry: cgr.dev
+          repository: chainguard/prometheus-alertmanager
+          tag: latest
     grafana:
       sidecar:
         image:
@@ -69,6 +75,27 @@ monitoring:
       image:
         registry: cgr.dev
         repository: chainguard/kube-state-metrics
+        tag: latest
+    prometheus:
+      prometheusSpec:
+        image:
+          registry: cgr.dev
+          repository: chainguard/prometheus
+          tag: latest
+    prometheusOperator:
+      image:
+        registry: cgr.dev
+        repository: chainguard/prometheus-operator
+        tag: latest
+      prometheusConfigReloader:
+        image:
+          registry: cgr.dev
+          repository: chainguard/prometheus-config-reloader
+          tag: latest
+    prometheus-node-exporter:
+      image:
+        registry: cgr.dev
+        repository: chainguard/prometheus-node-exporter
         tag: latest
 
 # Addons image replacements
