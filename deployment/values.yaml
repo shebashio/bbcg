@@ -64,3 +64,11 @@ monitoring:
           requests:
             cpu: 100m
             memory: 100Mi
+
+addons:
+  # Metrics Server image replacement
+  metricsServer:
+    values:
+      image:
+        repository: cgr.dev/chainguard/metrics-server
+        tag: latest
