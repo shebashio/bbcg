@@ -49,13 +49,14 @@ kyvernoPolicies:
       restrict-host-path-mount-pv:
         validationFailureAction: audit
 
-# Grafana sidecar image replacement
+# Monitoring image replacements
 monitoring:
   values:
     grafana:
       sidecar:
         image:
-          repository: cgr.dev/chainguard/k8s-sidecar
+          registry: cgr.dev
+          repository: chainguard/k8s-sidecar
           tag: latest
         resources:
           limits:
@@ -64,11 +65,17 @@ monitoring:
           requests:
             cpu: 100m
             memory: 100Mi
+    kube-state-metrics:
+      image:
+        registry: cgr.dev
+        repository: chainguard/kube-state-metrics
+        tag: latest
 
+# Addons image replacements
 addons:
-  # Metrics Server image replacement
   metricsServer:
     values:
       image:
-        repository: cgr.dev/chainguard/metrics-server
+        registry: cgr.dev
+        repository: chainguard/metrics-server
         tag: latest
