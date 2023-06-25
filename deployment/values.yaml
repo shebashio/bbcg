@@ -12,3 +12,15 @@ neuvector:
 # Tempo is the "straw that broke the camel's back" for my pay-to-play cluster ):
 tempo:
   enabled: false
+
+######################
+## CHAINGUARD MAGIC ##
+######################
+
+# Kyverno image replacement
+kyverno:
+  values:
+    initImage:
+      registry: cgr.dev
+      repository: chainguard/kyvernopre
+      tag: latest
