@@ -1,3 +1,6 @@
+# zarf baddies
+*.tar.zst
+
 .idea/
 certs/
 
