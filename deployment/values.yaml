@@ -3,3 +3,9 @@ registryCredentials:
   username: "###ZARF_VAR_REGISTRY1_USERNAME###"
   password: "###ZARF_VAR_REGISTRY1_CLI_SECRET###"
   email: ""
+
+neuvector:
+  enabled: false
+
+tempo:
+  enabled: false

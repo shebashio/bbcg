@@ -27,7 +27,4 @@ components:
         version: 2.0.0
         repo: https://github.com/willswire/bbcg.git
         valuesFiles:
-          - configs/disable-all.yaml
-          - configs/ingress.yaml
-          - configs/kyverno.yaml
-          - configs/loki.yaml
+          - values.yaml
