@@ -24,3 +24,43 @@ kyverno:
       registry: cgr.dev
       repository: chainguard/kyvernopre
       tag: latest
+
+# Edit policies to allow using alternate registries, 'latest' tags, etc.
+kyvernoPolicies:
+  enabled: true
+  values:
+    policies:
+      disallow-image-tags:
+        validationFailureAction: audit
+      disallow-shared-subpath-volume-writes:
+        validationFailureAction: audit
+      restrict-host-ports:
+        validationFailureAction: audit
+      restrict-capabilities:
+        validationFailureAction: audit
+      restrict-image-registries:
+        validationFailureAction: audit
+      disallow-host-namespaces:
+        validationFailureAction: audit
+      disallow-privileged-containers:
+        validationFailureAction: audit
+      require-non-root-user:
+        validationFailureAction: audit
+      restrict-host-path-mount-pv:
+        validationFailureAction: audit
+
+# Grafana sidecar image replacement
+monitoring:
+  values:
+    grafana:
+      sidecar:
+        image:
+          repository: cgr.dev/chainguard/k8s-sidecar
+          tag: latest
+        resources:
+          limits:
+            cpu: 500m
+            memory: 500Mi
+          requests:
+            cpu: 100m
+            memory: 100Mi
