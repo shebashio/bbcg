@@ -14,3 +14,6 @@ Not all Iron Bank containers have a corresponding match in Chainguard (yet!). Se
 - metrics server
 
 Both Istio and Grafana need to be supported by CHainguard to enable a vanilla, Big Bang Core Services deployment without Iron Bank.
+
+
+## TODO: CI
