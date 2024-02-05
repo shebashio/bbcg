@@ -5,11 +5,11 @@ resources:
 # update flux components to use chainguard images
 images:
 - name: ghcr.io/fluxcd/helm-controller
-  newName: cgr.dev/chainguard/helm-controller
+  newName: cgr.dev/shebash.io/flux-helm-controller
   newTag: latest
 - name: ghcr.io/fluxcd/kustomize-controller
-  newName: cgr.dev/chainguard/kustomize-controller
-  newTag: latest
+  newName: cgr.dev/shebash.io/flux-kustomize-controller
+  newTag: v1
 - name: ghcr.io/fluxcd/notification-controller
   newName: cgr.dev/chainguard/notification-controller
   newTag: latest

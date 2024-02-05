@@ -1,4 +1,4 @@
-# Needed for Iron Bank images and default Big Bang packages; set at deploy time 
+# Needed for Iron Bank images and default Big Bang packages; set at deploy time
 registryCredentials:
   registry: registry1.dso.mil
   username: "###ZARF_VAR_REGISTRY1_USERNAME###"
@@ -97,5 +97,10 @@ addons:
   metricsServer:
     values:
       image:
-        repository: cgr.dev/chainguard/metrics-server
-        tag: latest
+        repository: cgr.dev/shebash.io/metrics-server-fips
+        tag: 0
+  vault:
+    values:
+      image:
+        repository: cgr.dev/shebash.io/vault-fips
+        tag: 1
