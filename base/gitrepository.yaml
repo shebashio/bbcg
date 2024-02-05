@@ -9,6 +9,6 @@ spec:
     /**/*.txt
     /**/*.sh
   interval: 10m
-  url: https://github.com/willswire/bbcg.git
+  url: https://github.com/shebashio/bbcg.git
   ref:
     tag: 2.0.0
